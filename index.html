@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Convenios</title>
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/frmw/jquery-3.2.1.min.js"></script>
+	<script src="js/frmw/angular.min2.js"></script>
+  <script src="js/frmw/route.min.js"></script>
+	
+</head>
+
+<body ng-app="Myapp">
+
+<header>
+    <nav class="menu"> 
+    <ul>
+        <li>Evaluación Front-end</li>
+        <li>Diego Pajuelo Menacho</li>
+    </ul>
+    </nav>
+</header>
+
+<div class="container marco">
+  <h3>Convenios</h3>  
+</div>
+    <br>
+    <br>
+    <br>
+<div class="container">
+    <div class="conveniosn" >
+        CONVENIO I
+        <div class="vtotal">Valor total declarado <input type="text"><i id="conveniosn" class="fa fa-chevron-up" style="font-size:24px"></i></div>
+    </div> 
+
+<div ng-controller="ConvenioController">
+
+<form ng-submit="onSubmit()" name="theform" novalidate="novalidate">
+    <div id="conveniosform" class="conveniosform" >
+        <div class="valores">
+           <p>Valor Total Edificación</p>
+           <input type="number" ng-model="formconv.vte" id="vte" name="vte" required="required">
+        </div>
+        <div class="valores">
+           <p>Valor Instalación Fijas</p>
+           <input type="number" ng-model="vif" ng-required="true">
+        </div>	
+        <div class="valores">
+           <p>Valor Contenido</p>
+           <input type="number" ng-model="vc" ng-required="true">
+        </div>	
+        <div class="valores">
+           <p>Valor Maquinaria Equipo</p>
+           <input type="number" ng-model="vme" ng-required="true">
+        </div>	
+        <div class="valores">
+           <p>Valor Mobiliario</p>
+           <input type="number" ng-model="vm" ng-required="true">
+        </div>	
+         <div class="valores">
+           <p>Valor Existencias</p>
+           <input type="number" ng-model="ve" ng-required="true">
+        </div>	 
+        <div class="valores">
+           <p>Lucro Cesante - Gastos Estables</p>
+           <input type="number" ng-model="lcge" ng-required="true">
+        </div>	
+        <div class="valores">
+           <p>Coberturas opcionales</p>
+           <div class="checks">
+           <div class="nchk"><input type="checkbox" class="">Terremoto</div>
+           <div class="nchk"><input type="checkbox" class="">Terrorismo</div>
+           </div>
+        </div>	
+        
+        
+    </div>
+    </form>
+    <br>
+    <br>
+    <div class="conveniosn">
+        CONVENIO 1<span class="glyphicon glyphicon-chevron-down"></span>
+    </div>
+     <div id="conveniosform" class="conveniosform" >
+        <div class="valores">
+           <p>Valor Total Edificación</p>
+           <input type="number" ng-model="vte">
+        </div>
+        <div class="valores">
+           <p>Valor Instalación Fijas</p>
+           <input type="number" ng-model="vif">
+        </div>	
+        <div class="valores">
+           <p>Valor Contenido</p>
+           <input type="number" ng-model="vc">
+        </div>	
+        <div class="valores">
+           <p>Valor Maquinaria Equipo</p>
+           <input type="number" ng-model="vme">
+        </div>	
+        <div class="valores">
+           <p>Valor Mobiliario</p>
+           <input type="number" ng-model="vm">
+        </div>	
+         <div class="valores">
+           <p>Valor Existencias</p>
+           <input type="number" ng-model="ve">
+        </div>	 
+        <div class="valores">
+           <p>Lucro Cesante - Gastos Estables</p>
+           <input type="number" ng-model="lcge">
+        </div>	
+        <div class="valores">
+           <p>Coberturas opcionales</p>
+           <div class="checks">
+           <div class="nchk"><input type="checkbox" class="">Terremoto</div>
+           <div class="nchk"><input type="checkbox" class="">Terrorismo</div>
+           </div>
+        </div>	
+        
+        
+    </div>
+	
+</div>
+
+<div class="container marco">
+        <h2>Datos del local</h2>
+</div>
+   <br>
+   
+   
+<div id="conveniosform" class="container">
+   <div class="filalocales">
+    <div class="valores">
+           <p>*Departamento</p>
+           <select name="dpto" id="">
+              <option value disabled="disabled" selected="selected">Seleccionar departamento</option>
+               <option value="">Lima</option>
+               <option value="">Ica</option>
+               <option value="">Cusco</option>
+               <option value="">Arequipa</option>
+               <option value="">Tacna</option>
+           </select>
+    </div>	
+    
+    <div class="valores">
+           <p>*Provincia</p>
+           <select name="prov" id="">
+              <option value disabled="disabled" selected="selected">Seleccionar provincia</option>
+               <option value="">Lima</option>
+               <option value="">Ica</option>
+               <option value="">Cusco</option>
+               <option value="">Arequipa</option>
+               <option value="">Tacna</option>
+           </select>
+    </div>	
+    
+    <div class="valores">
+           <p>*Distrito</p>
+           <select name="dist" id="">
+              <option value disabled="disabled" selected="selected">Seleccionar Distrito</option>
+               <option value="">Lima</option>
+               <option value="">Ica</option>
+               <option value="">Cusco</option>
+               <option value="">Arequipa</option>
+               <option value="">Tacna</option>
+           </select>
+    </div>	
+    </div>
+    <div class="valores alrm">
+           <p>Alarma de monitoreo</p>
+           <select name="alrm" id="">
+              <option value disabled="disabled" selected="selected">Seleccionar Tipo</option>
+               <option value="">No contrata</option>
+
+           </select>
+    </div>	
+    </div>
+    
+<div class="container">   
+<input type="submit" class="btn btn-primary" value="Ingresa los daroa para calcular la Prima Total">
+</div>
+</div> 
+<br>
+<br>
+<br>
+
+<script src="js/app.js" type="text/javascript"></script>
+<!--script src="js/controllers/ConvenioController.js" type="text/javascript"></script-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
