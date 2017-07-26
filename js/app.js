@@ -1,4 +1,5 @@
-var myapp = angular.module('Myapp', ['ngRoute']);
+var myapp = angular.module('Myapp', []);
+
 
 // myapp.config(['$routeProvider', function($routeProvider) {
 // 	routeProvider
@@ -15,20 +16,17 @@ var myapp = angular.module('Myapp', ['ngRoute']);
 //     });
 // }]);
             
-myapp.controller('ConvenioController', function($scope){
+// myapp.controller('ConvenioController', function($scope){
    
-    $scope.formconv = {};
-    
-    $scope.onSubmit = function(valid){
-        
-    }
-    
-});
-// myapp.controller('ConvenioController','$scope', '$location', function($scope, $location){
-	
 //     $scope.formconv = {};
     
-//     $scope.onSubmit = function(){
-//         $location.path("resumen");
+//     $scope.onSubmit = function(valid){
+//         if (valid) {
+//         	console.log("Submited");
+//         	console.log($scope.formconv);
+//         }else {
+//         	console.log("Invalid");
+//         }
 //     }
+    
 // });

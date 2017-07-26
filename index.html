@@ -42,33 +42,34 @@
 
 <form ng-submit="onSubmit()" name="theform" novalidate="novalidate">
     <div id="conveniosform" class="conveniosform" >
+
         <div class="valores">
            <p>Valor Total Edificación</p>
-           <input type="number" ng-model="formconv.vte" id="vte" name="vte" required="required">
+           <input type="number" ng-model="vte" id="vte" name="vte" required="required">
         </div>
         <div class="valores">
            <p>Valor Instalación Fijas</p>
-           <input type="number" ng-model="vif" ng-required="true">
+           <input type="number" ng-model="vif" required="required" >
         </div>	
         <div class="valores">
            <p>Valor Contenido</p>
-           <input type="number" ng-model="vc" ng-required="true">
+           <input type="number" ng-model="vc" required="required">
         </div>	
         <div class="valores">
            <p>Valor Maquinaria Equipo</p>
-           <input type="number" ng-model="vme" ng-required="true">
+           <input type="number" ng-model="vme" required="required">
         </div>	
         <div class="valores">
            <p>Valor Mobiliario</p>
-           <input type="number" ng-model="vm" ng-required="true">
+           <input type="number" ng-model="vm" required="required">
         </div>	
          <div class="valores">
            <p>Valor Existencias</p>
-           <input type="number" ng-model="ve" ng-required="true">
+           <input type="number" ng-model="ve" required="required">
         </div>	 
         <div class="valores">
            <p>Lucro Cesante - Gastos Estables</p>
-           <input type="number" ng-model="lcge" ng-required="true">
+           <input type="number" ng-model="lcge" required="required">
         </div>	
         <div class="valores">
            <p>Coberturas opcionales</p>
@@ -80,45 +81,49 @@
         
         
     </div>
-    </form>
+    
+
+   <!--  <pre>
+      {{theform | json}}
+    </pre> -->
     <br>
     <br>
     <div class="conveniosn">
-        CONVENIO 1<span class="glyphicon glyphicon-chevron-down"></span>
+        CONVENIO II<span class="glyphicon glyphicon-chevron-down"></span>
     </div>
      <div id="conveniosform" class="conveniosform" >
         <div class="valores">
            <p>Valor Total Edificación</p>
-           <input type="number" ng-model="vte">
+           <input type="number" ng-model="vte2">
         </div>
         <div class="valores">
            <p>Valor Instalación Fijas</p>
-           <input type="number" ng-model="vif">
+           <input type="number" ng-model="vif2">
         </div>	
         <div class="valores">
            <p>Valor Contenido</p>
-           <input type="number" ng-model="vc">
+           <input type="number" ng-model="vc2">
         </div>	
         <div class="valores">
            <p>Valor Maquinaria Equipo</p>
-           <input type="number" ng-model="vme">
+           <input type="number" ng-model="vme2">
         </div>	
         <div class="valores">
            <p>Valor Mobiliario</p>
-           <input type="number" ng-model="vm">
+           <input type="number" ng-model="vm2">
         </div>	
          <div class="valores">
            <p>Valor Existencias</p>
-           <input type="number" ng-model="ve">
+           <input type="number" ng-model="ve2">
         </div>	 
         <div class="valores">
            <p>Lucro Cesante - Gastos Estables</p>
-           <input type="number" ng-model="lcge">
+           <input type="number" ng-model="lcge2">
         </div>	
         <div class="valores">
            <p>Coberturas opcionales</p>
            <div class="checks">
-           <div class="nchk"><input type="checkbox" class="">Terremoto</div>
+           <div class="nchk"><input type="checkbox" >Terremoto</div>
            <div class="nchk"><input type="checkbox" class="">Terrorismo</div>
            </div>
         </div>	
@@ -126,7 +131,7 @@
         
     </div>
 	
-</div>
+
 
 <div class="container marco">
         <h2>Datos del local</h2>
@@ -183,7 +188,9 @@
     </div>
     
 <div class="container">   
-<input type="submit" class="btn btn-primary" value="Ingresa los daroa para calcular la Prima Total">
+<input type="submit" class="btn btn-primary"  value="Ingresa los daroa para calcular la Prima Total">
+</div>
+</form>
 </div>
 </div> 
 <br>
@@ -191,7 +198,9 @@
 <br>
 
 <script src="js/app.js" type="text/javascript"></script>
-<!--script src="js/controllers/ConvenioController.js" type="text/javascript"></script-->
+<script src="js/controllers/ConvenioController.js" type="text/javascript"></script>
+<script src="js/services/servic.js" type="text/javascript"></script>
+
 <script src="js/scripts.js"></script>
 </body>
 </html>
